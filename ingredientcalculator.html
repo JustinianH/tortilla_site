@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tortilla Ingredient Calculator</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta name="description" content="Welcome to the one-stop site for tortilla make. Browse our tortilla recipes, use our ingredient calculator, and learn how to make the best tortillas you can right at home.">
+
+    <meta name="keywords" content="tortillas, tortillas recipe, tortilla recipes, corn torilla recipe, flour tortilla recipe, authentic tortillas, tortilla ingredients">
+
+    <meta name="author" content="Justin N. Hanson">
+
+</head>
+
+
+<body>
+
+    <!-- Begin Container -->
+    <div class="container" style="padding-bottom: 15%;">
+        <!-- Header -->
+        <div class="row" id="header_nav">
+            <div class="col-md-12">
+
+                <h1 class="text-center"> <a href="index.html">Tortillas </a> </h1>
+            </div>
+        </div>
+
+
+        <!-- Begin Nav -->
+        <nav class="navbar navbar-default" style="border:none;">
+            <div class="container-fluid">
+                <ul class="nav nav-justified text-center">
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tortillas Homes
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Tortillas Home</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li><a href="index.html#historyTortilla">History of Tortillas</a>
+                                </li>
+                                <li><a href="index.html#authenticTortillas">Authentic Tortillas</a>
+                                </li>
+                                <li><a href="index.html#aboutSite">About this Site</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Flour Tortillas
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="flourtortillarecipe.html">Flour Tortillas Home</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li><a href="flourtortillarecipe.html#flourRecipe">Flour Tortillas</a>
+                                </li>
+                                <li><a href="flourtortillarecipe.html#flourTools">Tortilla Tools</a>
+                                </li>
+                                <li><a href="flourtortillarecipe.html#flourIngredients">Flour Tortilla Ingredients</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Corn Tortillas
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="corntortilla.html">Corn Tortillas Home</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li><a href="corntortilla.html#Corn_tortillas">Corn Tortillas</a>
+                                </li>
+                                <li><a href="corntortilla.html#tortilla_tools">Tortilla Tools</a>
+                                </li>
+                                <li><a href="corntortilla.html#tortilla_recipe">Corn Tortilla Recipe</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Ingredient Calculator
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="ingredientcalculator.html">Ingredient Calculator Home</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Share Div -->
+
+        <div class="row">
+
+            <div class="col-sm-12" id="social_div">
+
+
+                <a href="https://twitter.com/home?status=www.tortillasrecipes.com/index"><img src="images/Twitter_logo.png" class="img-responsive pull-right" alt="twitter share logo">
+                </a>
+
+                <a href="https://pinterest.com/pin/create/button/?url=&media=www.tortillasrecipes.com/index.html&description="><img src="images/pinterest_logo.png" class="img-responsive pull-right" alt="pinterest share logo">
+                </a>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=tortillasrecipes.com/index.html"><img src="images/facebook-icon.png" class="img-responsive pull-right" alt="facebook share logo">
+                </a>
+
+                <a href="https://plus.google.com/share?url=www.tortillasrecipes.com/index"><img src="images/googleplus-icon.png" class="img-responsive pull-right" alt="google plus share logo">
+                </a>
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1> Tortilla Ingredient Calculator</h1>
+
+                <p class="text-max-width center"> Tortilla ingredients can sometimes be difficult to determine, especially when you want to make a specific amount of tortillas for a certain recipe or group of diners. Instead of having to either double or reduce other recipes, I've come up with a tortilla ingredient calculator so you don't have to guess ingredients and aren't beholden to the number of tortillas certain recipes produce. </p>
+
+                <p class="text-max-width center"> Enjoy!</p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row pad-5">
+
+            <div class="col-md-6 text-left">
+
+
+
+                <!-- Begin Form -->
+
+                <div id="form_div" class="text-center">
+
+                    <h2> Flour Tortilla Ingredient Calculator</h2>
+                    <form id="entryForm" onsubmit="return stopit();">
+
+                        I want to make
+                        <input type="text" name="tortillaInput" id="num"> flour tortillas.
+                        <br>
+                        <br>
+                        <button id="tortillaButton"> Calculate</button>
+                    </form>
+
+                    <br>
+
+                    <ul style="list-style-type: none;" id="ingredientList">
+
+                        <!-- <li id="flourAmount"> </li> 
+                    <li id="saltAmount"> </li> 
+                    <li id="lardAmount"> </li> 
+                    <li id="waterAmount"> </li> -->
+
+
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+            <script>
+                $("button#tortillaButton").click(function() {
+
+
+
+                    var entry = $("#num").val();
+
+                    var flour = ((entry * 2) * .125); //oz
+                    var salt = ((entry * 0.0069) * 6); //oz
+                    var lard = ((entry * 0.05) * 1.25); //oz
+                    var soda = ((entry * 0.0138) * 6);
+                    var water = (entry * 0.09375); //oz
+
+                    if ($("#ingredientList").children() != undefined) {
+                        $("#ingredientList").children().remove();
+                    }
+
+
+                    $("#ingredientList").append("<li>You will need <strong>" + flour + " cups of flour.</strong></li>");
+
+                    $("#ingredientList").append("<li>You will need <strong>" + salt.toFixed(2) + " teaspoons of salt.</strong></li>");
+
+                    $("#ingredientList").append("<li>You will need <strong>" + lard.toFixed(2) + " cups of lard.</strong></li>");
+
+                    $("#ingredientList").append("<li>You will need <strong>" + soda.toFixed(2) + " teaspoons of baking soda.</strong></li>");
+
+                    $("#ingredientList").append("<li>You will need <strong>" + water.toFixed(2) + " cups of water.</strong></li>");
+
+                });
+
+                $("input#num").keypress(function(x) {
+                    if (x == 13) {
+
+                        $("#tortillaButton").click();
+                    };
+                });
+
+                function stopit(e) {
+                    return false;
+                }
+            </script>
+
+            <!-- Corn Tortilla Ingredient Calculator -->
+
+
+
+            <div class="col-md-6 text-center">
+                <h2> Corn Tortilla Ingredient Calculator</h2>
+
+                <form onsubmit="return stopit();">
+
+                    I want to make
+                    <input type="text" name="tortillaInput" id="cornNum"> corn tortillas.
+                    <br>
+                    <br>
+                    <button id="cornButton"> Calculate</button>
+                </form>
+
+                <br>
+
+                <ul style="list-style-type: none;" id="cornIngredientList">
+
+
+                </ul>
+
+                <script type="text/javascript">
+                    $("button#cornButton").click(function() {
+
+                        var entry = $("#cornNum").val();
+
+                        var masa = ((entry * 1.3) * .125); //oz
+
+                        var water = ((entry * 0.5) * .125); //oz
+
+                        if ($("#cornIngredientList").children() != undefined) {
+                            $("#cornIngredientList").children().remove();
+                        }
+
+                        $("#cornIngredientList").append("<li>You will need <strong>" + masa.toFixed(2) + " cups of masa.</strong></li>");
+
+                        $("#cornIngredientList").append("<li>You will need <strong>" + water.toFixed(2) + " cups of water.</strong></li>");
+
+                    });
+
+
+
+                    $("input#cornNum").keypress(function(x) {
+                        if (x == 13) {
+
+                            $("button#cornButton").click();
+                        };
+                    });
+                </script>
+
+            </div>
+
+        </div>
+
+        <!-- /end Container  -->
+    </div>
+</body>
+
+</html>

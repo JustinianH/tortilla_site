@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homemade Tortillas Recipe & Instructions</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta name="description" content="Welcome to the one-stop site for tortilla make. Browse our tortilla recipes, use our ingredient calculator, and learn how to make the best tortillas you can right at home.">
+
+    <meta name="keywords" content="tortillas, tortillas recipe, tortilla recipes, corn torilla recipe, flour tortilla recipe, authentic tortillas, tortilla ingredients">
+
+    <meta name="author" content="Justin N. Hanson">
+
+    <script type="text/javascript">
+    
+    function addComment() {
+
+        $.ajax({
+            url: 'http://tortillasrecipe.com/form_handle.php',
+            type: 'POST',
+            data: "comment=" + $('#comment').val() + "&username=" + $("#username").val(),
+            success: function(data) {
+                    //getComment();
+                    var parseData = $.parseJSON(data);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert('failure!');
+                }
+            });
+
+    }
+
+    function getComment() {
+
+        $("#comment").val("");
+        $("#username").val("");
+
+
+        $.ajax({
+            url: 'http://tortillasrecipe.com/getcomments.php',
+            type: 'POST',
+            data: "",
+            success: function(data) {
+                    //$("#comments").html(data);
+                    var parseData = $.parseJSON(data);
+
+                    for (var x = 0; x < parseData.length; x++) {
+
+                        $("#Comments_user").append("<p>" + parseData[x].user + "</p>");
+                        $("#Comments_comment").append("<p>" + parseData[x].comment + "</p>");
+                        $("#Comments_date").append("<p>" + parseData[x].date + "</p>");
+
+                    }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert('failure!');
+                }
+            });
+
+}
+
+
+getComment();
+</script>
+
+</head>
+
+
+<body>
+
+    <!-- Begin Container -->
+    <div class="container" style="padding-bottom: 5%;">
+        <!-- Header -->
+        <div class="row" id="header_nav">
+            <div class="col-md-12">
+
+                <h1 class="text-center"> <a href="index.html">Tortillas </a></h1>
+            </div>
+        </div>
+
+        <!-- Begin Nav -->
+        <nav class="navbar navbar-default" style="border:none;">
+            <div class="container-fluid">
+                <ul class="nav nav-justified text-center">
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tortillas Homes
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Tortillas Home</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li><a href="#historyTortilla">History of Tortillas</a>
+                                </li>
+                                <li><a href="#authenticTortillas">Authentic Tortillas</a>
+                                </li>
+                                <li><a href="#aboutSite">About this Site</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Flour Tortillas
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="flourtortillarecipe.html">Flour Tortillas Home</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li><a href="flourtortillarecipe.html#flourRecipe">Flour Tortillas</a>
+                                </li>
+                                <li><a href="flourtortillarecipe.html#flourTools">Tortilla Tools</a>
+                                </li>
+                                <li><a href="flourtortillarecipe.html#flourIngredients">Flour Tortilla Ingredients</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Corn Tortillas
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="corntortilla.html">Corn Tortillas Home</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li><a href="corntortilla.html#Corn_tortillas">Corn Tortillas</a>
+                                </li>
+                                <li><a href="corntortilla.html#tortilla_tools">Tortilla Tools</a>
+                                </li>
+                                <li><a href="corntortilla.html#tortilla_recipe">Corn Tortilla Recipe</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Ingredient Calculator
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="ingredientcalculator.html">Ingredient Calculator Home</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Share Div -->
+
+        <div class="row">
+
+            <div class="col-sm-12" id="social_div">
+
+                <a href="https://twitter.com/home?status=www.tortillasrecipes.com/index"><img src="images/Twitter_logo.png" class="img-responsive pull-right" alt="twitter share logo">
+                </a>
+
+                <a href="https://pinterest.com/pin/create/button/?url=&media=www.tortillasrecipes.com/index.html&description="><img src="images/pinterest_logo.png" class="img-responsive pull-right" alt="pinterest share logo">
+                </a>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=tortillasrecipes.com/index.html"><img src="images/facebook-icon.png" class="img-responsive pull-right" alt="facebook share logo">
+                </a>
+
+                <a href="https://plus.google.com/share?url=www.tortillasrecipes.com/index"><img src="images/googleplus-icon.png" class="img-responsive pull-right" alt="google plus share logo">
+                </a>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- Begin Content -->
+        <div class="row">
+
+            <div class="col-md-12 center">
+
+                <img src="images/tortillas.png" class="img-responsive center" alt="main tortilla picture">
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12 text-left ">
+
+                <p class="text-max-width center pad-2 ">How to describe the tortilla? How does one capture the simplicity, grandeur and joy of this simple and extraordinary staple of cuisine both in Latin America and the world over? Fresh and familiar, versatile but reliable, contemporary yet timeless, the tortilla is a centerpiece of hundreds of dishes and practically all of Mexican cuisine. What bread is to the French, what potatoes were to the Irish, the tortilla is to Latin American (and more) food today.
+                </p>
+
+                <h2 id="historyTortilla"> The History of the Tortilla</h2>
+
+                <p class="text-max-width center pad-2 ">Older than <em>The Odyssey</em>, older than the Bible, the tortilla traces its origins back to the domestication of corn eight thousand years ago in Mexico. The corn tortilla, it follows, was the first on the scene, and it is still considered the standard version among much of the American Southwest and in Mexico. The tortilla spread widely throughout Mexico following its origination, moving north and south from tribe to tribe as the continent became connected through the trade and of nomadic groups. For them, the tortilla was a daily necessity, providing a portable and easy form of nourishment.
+                </p>
+
+                <p class="text-max-width center pad-2 ">By the 1500s, native Mexicans had already developed methods of refining corn for consumption. The recipe and method for making tortillas is little changed from this time. The essential remain today as they did six hundred years ago: granulated corn is shaped into circles that heated on a stone or griddle. The quality of these tortillas depended entirely on the quality of their few ingredients, so much so that different names were adopted to signify the hierarchy of tortilla quality. Noble Spaniards, for whom tortillas quickly became a staple after their arrival in Mexico, dined on the veiltexcalli, a large, thin tortilla, while the less fortunate ate the tlaxcalpacholli, a lower quality tortilla made from blue corn. Countless varieties supplemented these examples, depending of the purpose and meal the for which the tortilla was intended.
+                </p>
+
+                <p class="text-max-width center pad-2 ">In Latin culture, the family matriarch took responsibility for making the day&#39; s tortillas. The process could last for hours, requiring early rising and continuous labor to complete the needed tortillas for each day. Women also provided the labor to make tortillas on a commercial scale, until machinery and industrialization largely displaced them in the 1960s, disrupting a timeless aspect of Mexican culture.
+                </p>
+
+                <p class="text-max-width center pad-2 ">Originally, natives referred to &#8220;tortillas&#8221; as tlaxcalli. The word &#8220;tortilla&#34; descends from the Spanish word &#8220;torta,&#34; meaning a cake or patty. The word &#8220;torta&#34; is still commonly used to distinguish the flat, salty bread known as a tortilla in South America from the many cakes that &#8220;torta&#34; refers to. In Spain, a &#8220;tortilla&#34; includes a concoction of eggs, onions, and potatoes mixed together and served as an appetizer. In most of the United States and particularly the Southwest, &#8220;tortilla&#34; is understood to be a flat piece of cooked dough. Tortilla&#39;s first recorded reference in English dates to 1699, when it was described as &#8220;small cakes made of flower or Indian corn.&#34;<sup>2</sup>
+                </p>
+
+
+
+                <div class="sidebar">
+
+                    <h3 id="authenticTortillas"> Sidebar: The Authenticity Debate&#8212;Are there Authentic Tortillas?</h3>
+
+
+
+                    <p class="text-max-width center pad-2 ">When searching for good tortillas, recipes, or Mexican / Latin food in general, many eaters specifically search for authenticity. But what exactly is authentic food? How can we determine what&#39;s authentic from what&#39;s inauthentic, and should it matter?
+
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">Authenticity is a complex subject, something philosophers and theorists have been puzzling over for quite a long time. Mostly, these philosophical discussions center on ideas of personal or existential authenticity, like how to find your &#8220;true self&#8221; or your &#8220;authentic self.&#8221;
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">Authenticity, in a nutshell, deeply relates to our search for truth, truth in its personal, moral, and ethical significance. But, somehow, we think of food in similar ways. For many, authentic cuisine refers to food that closely resembles its place of origin and the cultural significance, methods of preparation, and manner of serving associated with that origin.
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">The desire for authenticity may also stem from many Americans&#39; knowledge of how Americanized several ethnic dishes are in the United States: pad thai, for instance, is prepared very differently in Thailand than it is in the United States, and sushi in Japan is unlikely to be in a roll. Other differences abound.
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">For this reason, many people associate authentic food with ethnic food, like Mexican, Indian, Chinese, or Italian food. Oftentimes, people define food as authentic that derive from peoples of that ethnicity (Italians make great Italian food, Mexicans great Mexican food, etc.), and ethnic chefs can more accurately render their nationality&#39;s cuisine.
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">Paradoxically, this view is both true and false. In the one sense, traveling to a region where a food originated allows you to uncover an older, perhaps more traditional, form of certain dishes. For instance, the Mexican taco is said to originate from the Oaxacan region, where a corn tortilla is filled very simply with meat and vegetables. Same for sushi in Japan and Pad Thai in Thailand.
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">Likewise, the idea of authentic food deriving from a certain region is complicated. In the case of the taco and other Mexican food, preparation methods for the same food differ by region&#8212;food on the border is very different from food from Mexico City. This is to say nothing of the many ways Mexican food differs from Spanish food and food from Latin America, places that are often conflated when categorizing food.
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">Another problem with the idea of authentic food is the superiority inextricably tied to the idea. In this conception, all food is either authentic or inauthentic, and there is no middle ground. Obviously, this view is simplistic. It implies a racial or ethnic determinism with respect to food. Obviously this is silly, as world-renowned chefs of several national origins have excelled or mastered a variety of ethnic cuisines.
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">Just as when it is applied to selfhood or truth, when it comes to food, authenticity is an idea. It is partially based on the historical origin of a dish, and partially on the taste or opinion of the eater. What&#39;s more, authenticity completely displaces a more essential food question: is it good?
+                    </p>
+
+                    <p class="text-max-width center pad-2 ">At its best, the quest for authentic cuisines represents a desire to experience other cultures through food. By learning the origin of national or cultural dishes, people can experience the history of that culture in a sensory, visceral way. At its worst, the idea communicates a kind of food superiority that creates a false dichotomy: authentic or inauthentic. In reality, food evolves just like people, cultures, and nations&#8212;often mixing with others to form something far more eclectic, bold, and extraordinary than the original. The truth about authentic food, I think, lies somewhere in the middle.
+                    </p>
+
+
+
+                </div>
+
+                <h2 id="aboutSite">About this Site</h2>
+
+                <p class="text-max-width center pad-2 ">Why does this site exist? Why do you presume, anonymous narrator, to hold forth on the tortilla, to describe its grandeur and reveal its mysteries?
+                </p>
+
+                <p class="text-max-width center pad-2 ">I am no guru, no great chef, no tortilla shaman claiming to make the best tortillas you&#39;ve ever had. Don&#39;t get me wrong: I make a good tortilla, but I created this site not to boast but to share. A few years back, I began to reevaluate my relationship with food. The problem was simple: I didn&#39;t make much food. My lack of culinary adventuring led to a boring diet (take out, cans of soup) and subpar health (processed foods).
+                </p>
+
+                <p class="text-max-width center pad-2 ">To remedy this, I started to cook. Gradually, I became pretty good, experimenting with several recipes.
+                </p>
+
+                <p class="text-max-width center pad-2 ">My basic discovery was this: food tastes better when you make it. Not only does it taste better, it <strong>is</strong> better. Homemade food features <strong>fresher ingredients</strong>, <strong>fewer calories</strong>, and <strong>better quality</strong> than processed and prepacked food from supermarkets, and is substantially healthier than food from fast food or traditional restaurants.
+                </p>
+
+                <p class="text-max-width center pad-2 ">The best part? <strong>If you love to eat, it&#39;s easy to cook.</strong>
+                </p>
+
+                <p class="text-max-width center pad-2 ">Eventually, my hobby made it&#39;s way to tortillas. A longtime fan of Mexican and Latin food, I knew that homemade tortillas were a necessity. The road from my first feeble attempts to making consistently high-quality tortillas did not happen overnight: it took multiple attempts and a fair amount of practice to perfect both the corn and flour tortilla.
+                </p>
+
+                <p class="text-max-width center pad-2 ">But, eventually, I got pretty good. And I&#39;m here to tell you that you can get pretty good too. Once you&#39;ve given it the first try, you&#39;ll find each successive attempt gets significantly easier.
+                </p>
+
+                <p class="text-max-width center pad-2 ">First time tortilla maker? I recommend that you first attempt flour tortillas, which are much more forgiving than corn tortillas. Once you&#39;ve got the hang of flour, give corn a try.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- Comments -->
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <h3> Enter a Name:</h3>
+
+                <form id="comment_section" action="form_handle.php" method="post">
+                    <div class="form-group">
+
+
+                        <input type="text" name="username" class="form-control" style="height: 200px;" id="username">
+
+
+
+                        <br>
+                        <br>
+                        <button type="button" onclick="addComment(); return false;" id="submit_button">Submit</button>
+
+                        <script type="text/javascript">
+
+                        $("#submit_button").click(function () {alert("Thanks for your comment! Your comment is being reviewed by the site adminstrator and will be posted when approved!");});
+
+                        </script>
+
+                        <!-- <input type="submit" value="Submit" id="submit" onclick="addComment(); return false;"> -->
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="col-md-6">
+
+                    <h3> Enter a Comment:</h3>
+
+                    <input type="text" name="comment" class="form-control" style="height: 200px;" id="comment">
+
+                </form>
+            </div>
+        </div>
+
+        <h3 class-"pad-2"> Submitted Comments:</h3>
+        
+        <div class="row" style="padding-top: 5%; padding-bottom: 10%;"  >
+
+            <div class="col-md-2" id="Comments_date">
+                <h4>Date</h4>
+            </div>
+
+            <div class="col-md-3" id="Comments_user">
+                <h4>User:</h4>
+            </div>
+
+            <div class="col-md-7" id="Comments_comment">
+                <h4>Comment:</h4>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+        <!-- Footer -->
+
+        <div class="row footer" id="footer">
+            <div class="col-md-12">
+
+                <p class="footer" style="padding: 0;"><sup>1</sup> <a href="http://proxy2.library.illinois.edu/login?url=http://search.credoreference.com/content/entry/bloomfood/tortilla/0">&#8220;Tortilla.&#8221; 2014. <em>In The Encyclopedia of American Food and Drink.</em> London: Bloomsbury. </a>
+                </p>
+
+                <p class="footer" style="padding: 0;"><sup>2</sup> <a href="http://www.oed.com.webproxy3.columbuslibrary.org/view/Entry/203676?redirectedFrom=tortilla#eid">&#8220;Tortilla,&#8221; <em>Oxford English Dictionary</em></a>
+                </p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+<!-- /end Container  -->
+</body>
+
+</html>

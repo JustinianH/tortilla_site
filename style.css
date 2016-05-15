@@ -1,0 +1,162 @@
+
+body {
+
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 12pt;
+	line-height: 1.7em;
+
+
+}
+
+li {
+	font-size: 12pt;
+	font-family: 'IM Fell Double Pica', serif;
+}
+
+#recipe_instructions {
+
+	/*background-image: url("images/notebook.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+
+
+
+}
+
+#comment_section {
+	padding-bottom: 5%;
+	margin: auto;
+
+}
+
+.sidebar {
+
+	background-color: #f3f2f2;
+	border: solid #f1f1f1 1px;
+
+}
+
+/*p {
+	padding: 2% 0 2% 0;
+	}*/
+
+	.nav {
+
+		background-color: white;
+		border-top: solid #f1f1f1 1px;
+		border-bottom: solid #f1f1f1 1px;
+
+	}
+
+	.btn-default {
+		border-color: white;
+	}
+
+	.text-max-width {
+
+		max-width: 700px;
+	}
+
+	#header_nav {
+		margin-top: 5%;
+		margin-bottom: 2%;
+	}
+
+	.navbar-default {
+		background-color: white;
+	}
+
+	.container { 
+		border-left: solid #f1f1f1 1px;
+		border-right: solid #f1f1f1 1px;
+		height: 100%;
+		margin-bottom: 5%;
+
+	}
+
+	.container-fluid {
+		background-color: white;
+	}
+
+	.gray{
+		background-color: #f1f1f1;
+	}
+
+	#social_div * img{
+		padding-left: 2%;
+	}
+
+	#hr {
+		color: #3E74B2;
+	}
+
+	.recipe_images {
+		height: 350px;
+		width: 450px;
+	}
+
+	.pad-2 {
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+
+	.pad-5 {
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+
+	.margin-bottom {
+		margin-bottom: 5%;
+	}
+
+	.show-border {
+		border: 2 solid blue;
+	}
+
+	nav, a {
+		min-height: 48px;
+		min-width: 48px;
+
+
+	}
+
+	.bottom-border {
+		border-bottom: solid black 1px;
+
+	}
+
+
+	#social_div {
+
+		margin-bottom: 2%;
+
+	}
+
+
+	.center {
+		
+		margin: auto;
+	}
+
+	a
+	{
+		target: "_blank";
+		color: black;
+	} 
+
+	#footer {
+		padding: 0;
+	}
+
+	@media screen and (max-width: 480px){
+		#J-image {
+			visibility: hidden;}
+
+			#header {
+				text-align: center;
+				margin: auto;		
+
+			}
+
+
+		}
