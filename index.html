@@ -16,6 +16,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <!-- Webmaster Tools -->
+
+    <meta name="google-site-verification" content="nbBY27XovqXvs0ZFrLSuR6O6ewAZJBqNvNUk43lkVmM" />
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <meta name="description" content="Welcome to the one-stop site for tortilla make. Browse our tortilla recipes, use our ingredient calculator, and learn how to make the best tortillas you can right at home.">
@@ -50,11 +54,13 @@
 
 
         $.ajax({
-            url: 'http://tortillasrecipe.com/getcomments.php',
+            url: 'http://tortillasrecipe.com/approved-comments.php',
             type: 'POST',
             data: "",
             success: function(data) {
-                    //$("#comments").html(data);
+                    $("#submitted-comments").html(data);
+
+
                     var parseData = $.parseJSON(data);
 
                     for (var x = 0; x < parseData.length; x++) {
@@ -64,13 +70,21 @@
                         $("#Comments_date").append("<p>" + parseData[x].date + "</p>");
 
                     }
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert('failure!');
                 }
+                // error: function(XMLHttpRequest, textStatus, errorThrown) {
+                //     alert('failure!');
             });
+    }
 
-}
+
+/*$(document).ready(function() {
+     // Load ajax.php as JSON and assign to the data variable
+     $.getJSON('approved-comments.php', function(data) {
+        // set the html content of the id myThing to the value contained in data
+        $("#Comments_comment").append(data.value);
+    });   
+ });
+*/
 
 
 getComment();
@@ -341,7 +355,7 @@ getComment();
 
         <h3 class-"pad-2"> Submitted Comments:</h3>
         
-        <div class="row" style="padding-top: 5%; padding-bottom: 10%;"  >
+        <div id="submitted-comments" class="row" style="padding-top: 5%; padding-bottom: 10%;"  >
 
             <div class="col-md-2" id="Comments_date">
                 <h4>Date</h4>
@@ -375,12 +389,21 @@ getComment();
 
             </div>
 
+             </div>
 
 
         </div>
 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    </div>
+  ga('create', 'UA-78136841-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 
 <!-- /end Container  -->
